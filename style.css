@@ -1,1 +1,221 @@
+/* 전체 초기화 및 폰트 설정 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+/* 앱 중앙 정렬 컨테이너 */
+.app-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 430px; /* 스마트폰 너비 기준 */
+    border-radius: 20px;
+    padding: 25px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* 헤더 시계 스타일 */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed #e4e6eb;
+}
+
+header h1 {
+    font-size: 20px;
+    color: #1c1e21;
+}
+
+.date-text {
+    font-size: 13px;
+    color: #65676b;
+    margin-top: 5px;
+}
+
+.time-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0064ff;
+    margin-top: 4px;
+    letter-spacing: 1px;
+}
+
+/* 공통 섹션 상자 스타일 */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-section h2 {
+    font-size: 18px;
+    color: #1c1e21;
+    margin-bottom: 5px;
+}
+
+/* 화면 전환용 숨김 클래스 (가장 중요) */
+.hidden {
+    display: none !important;
+}
+
+/* 입력창 그룹 스타일 */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label, .group-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b4c4f;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd0d5;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #0064ff;
+}
+
+/* 라디오 & 체크박스 스타일 */
+.radio-label, .checkbox-label {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #f7f8fa;
+    border: 1px solid #e4e6eb;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.radio-label input, .checkbox-label input {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+#reason-container {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* 버튼 디자인 시스템 */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn:disabled {
+    background-color: #e4e6eb !important;
+    color: #bcc0c4 !important;
+    cursor: not-allowed;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-primary { background-color: #0064ff; color: #ffffff; }
+.btn-success { background-color: #00a400; color: #ffffff; }
+.btn-warning { background-color: #f5b100; color: #ffffff; }
+.btn-danger  { background-color: #fa3e3e; color: #ffffff; }
+
+/* 안내 메시지 텍스트 */
+.message-text {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 5px;
+}
+
+/* 타이머 내부 스타일 */
+.user-welcome {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #e7f3ff;
+    color: #1877f2;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#welcome-user {
+    text-decoration: underline;
+}
+
+.timer-box, .upload-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e4e6eb;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.timer-box h3, .upload-box h3 {
+    font-size: 15px;
+    color: #4b4c4f;
+    margin-bottom: 10px;
+}
+
+#timer-display {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+    margin: 15px 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 8px;
+}
+
+/* 이미지 업로드 및 미리보기 */
+.upload-notice {
+    font-size: 13px;
+    color: #65676b;
+    margin-bottom: 10px;
+}
+
+.file-input {
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+#photo-preview {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccd0d5;
+}
